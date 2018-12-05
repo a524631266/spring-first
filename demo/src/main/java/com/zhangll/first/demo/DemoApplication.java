@@ -13,6 +13,9 @@ public class DemoApplication extends SpringBootServletInitializer{
 		System.out.println("1111");
 		System.out.println("22");
 	}
+	/**
+	 * use in outer tomcat with war package 
+	 */
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		return super.configure(builder);

@@ -1,0 +1,20 @@
+server:
+  port: 9090
+#   spring boot中读取配置文件除了可以读取properties后缀的文件外，还引入了yml的读取，用起来也是相当简单，我们先把resource下的application.properties修改为yml文件，接着在其中添加端口号9090。
+
+zll:
+  name: dezhen
+  age: 28
+  height: 175cm
+  weight: 65kg
+  long: 18cm
+  str: ${random.value} #32位的随机字符串
+  uuid: ${random.uuid} #uuid
+  num: ${random.int(100)} #100内随机整数
+  num0: ${random.int(0,99)} #0-99内的随机整数
+
+rand:
+  str: ${random.value} #32位的随机字符串
+  uuid: ${random.uuid} #uuid
+  num: ${random.int(100)} #100内随机整数
+  num0: ${random.int(0,99)} #0-99内的随机整数
