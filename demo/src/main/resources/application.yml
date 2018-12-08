@@ -13,8 +13,30 @@ zll:
   num: ${random.int(100)} #100内随机整数
   num0: ${random.int(0,99)} #0-99内的随机整数
 
+
+zll2:
+    name: zll2
+    age: 30
+    height: 180cm
+    weight: 100kg
+    girl:
+        name: tiant
+        age: 22
+
+
+staticzll2:
+    name: staticzll1
+    age: 1000
 rand:
   str: ${random.value} #32位的随机字符串
   uuid: ${random.uuid} #uuid
   num: ${random.int(100)} #100内随机整数
   num0: ${random.int(0,99)} #0-99内的随机整数
+
+# 配置本地 线上 下载
+# 规律如下
+# active: dev2 => application-dev2.yml
+# active: proddad => application-proddad.yml
+spring:
+    profiles:
+        active: dev2
