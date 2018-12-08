@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 这个是ioc 也就是控制反转,由spring管理创建对象，不能是接口，因为接口不能new-->
+    <bean id="secondid" class="com.zhangll.second.service.ServiceImp" >
+		<!-- 这个是依赖注入,也就是在ioc创建的过程中自动加载 -->
+		<property name="dao" ref="dao" >
+		</property>
+	</bean>
+	<bean id="dao" class="com.zhangll.second.Dao.DaoImp" /> 
+</beans>
