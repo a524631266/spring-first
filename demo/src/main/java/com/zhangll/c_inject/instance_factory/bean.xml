@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!-- 创建一个实例，所以不需要factory-method（此为静态工厂） -->
+    <bean id="myInstanceBeanId" class="com.zhangll.c_inject.instance_factory.MyInstanceBean"></bean>
+	<bean id="userServiceId" factory-bean="myInstanceBeanId" factory-method="createService"></bean>
+</beans>

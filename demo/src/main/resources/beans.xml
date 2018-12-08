@@ -4,10 +4,21 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- 这个是ioc 也就是控制反转,由spring管理创建对象，不能是接口，因为接口不能new-->
+	<!-- 这个一个默认构造 -->
     <bean id="secondid" class="com.zhangll.second.service.ServiceImp" >
 		<!-- 这个是依赖注入,也就是在ioc创建的过程中自动加载 -->
 		<property name="dao" ref="dao" >
 		</property>
+	</bean>
+	<!-- 构造函数有参数 -->
+	<bean id="secondid2" class="com.zhangll.second.service.ServiceImp2" >
+		<!-- 这个是依赖注入,也就是在ioc创建的过程中自动加载 -->
+		<property name="dao" ref="dao" >
+		</property>
+		<constructor-arg>
+			<entry> </entry>
+			
+		</constructor-arg>
 	</bean>
 	<bean id="dao" class="com.zhangll.second.Dao.DaoImp" /> 
 </beans>
