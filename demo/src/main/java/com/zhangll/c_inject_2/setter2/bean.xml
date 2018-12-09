@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 1.最普通的注入方法 -->
+    <bean id="personId1" class="com.zhangll.c_inject_2.setter2.Person">
+		<property name="name" value="zll"></property>
+		<property name="age" value="22"></property>
+		<property name="homeaddr" ref="homeaddrId"></property>
+		<property name="workaddr" ref="workaddrId"></property>
+	</bean>
+	<bean id="homeaddrId" class="com.zhangll.c_inject_2.setter2.Address">
+		<property name="addr" value="DGG"></property>
+		<property name="tel" value="123456"></property>
+	</bean>
+	<bean id="workaddrId" class="com.zhangll.c_inject_2.setter2.Address">
+		<property name="addr" value="hhh"></property>
+		<property name="tel" value="556666"></property>
+	</bean>
+	<!-- 2.p命名空间注入方法 -->
+
+	<bean id="personId2" class="com.zhangll.c_inject_2.setter2.Person" p:name="zll2"
+	       p:age="2222" p:homeaddr-ref="homeaddrId2" p:workaddr-ref="workaddrId2"
+	/>
+	<bean id="homeaddrId2" class="com.zhangll.c_inject_2.setter2.Address" 
+	       p:addr="DGG2" p:tel="123456222"
+	/>
+	<bean id="workaddrId2" class="com.zhangll.c_inject_2.setter2.Address"
+	       p:addr="hhh2222" p:tel="5566662222"
+	/>
+	<!-- 3.pel 内置语法糖，类似于react中的表达式 -->
+
+	<bean id="personId3" class="com.zhangll.c_inject_2.setter2.Person">
+        <property name="name" value="#{'zll'.toUpperCase()}"></property>
+		<property name="age" value="#{22}"></property>
+		<property name="homeaddr" value="#{homeaddrId3}"></property>
+		<property name="workaddr" value="#{workaddrId3}"></property>
+	</bean>
+	<bean id="homeaddrId3" class="com.zhangll.c_inject_2.setter2.Address">
+	    <property name="addr" value="#{'DGG'.toLowerCase()}"></property>
+		<property name="tel" value="31313131"></property>
+	</bean>
+	<bean id="workaddrId3" class="com.zhangll.c_inject_2.setter2.Address">
+	    <property name="addr" value="hhh"></property>
+		<property name="tel" value="33131313131"></property>
+	</bean>
+</beans>

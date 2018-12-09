@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="personId" class="com.zhangll.c_inject_2.setter2.Person">
+		<property name="name" value="zll"></property>
+		<property name="age" value="22"></property>
+		<property name="homeaddr" ref="homeaddrId"></property>
+		<property name="workaddr" ref="workaddrId"></property>
+	</bean>
+	<bean id="homeaddrId" class="com.zhangll.c_inject_2.setter2.Address">
+		<property name="addr" value="DGG"></property>
+		<property name="tel" value="123456"></property>
+	</bean>
+	<bean id="workaddrId" class="com.zhangll.c_inject_2.setter2.Address">
+		<property name="addr" value="hhh"></property>
+		<property name="tel" value="556666"></property>
+	</bean>
+</beans>
