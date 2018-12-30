@@ -5,8 +5,9 @@
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
         <!-- 创建一个实例，所以不需要factory-method（此为静态工厂） -->
    <!-- 每次不一样，如果创建两个实例，会出现两次init，但是没有销毁操作 -->
-	<bean id="userServiceId" class="com.zhangll.e_lifecycle.UserServiceImp" init-method="myInit" destroy-method="myDestroy" scope="prototype"></bean>
+   <!-- 要执行销毁方法，必须要在单例情况下使用 -->
+	<bean id="userServiceId" class="com.zhangll.e_lifecycle.UserServiceImp" init-method="myInit" destroy-method="myDestroy" scope="singleton"></bean>
 	<!-- 创建单独的一个,即使getBean两次，也只进行一次的init destroy postbeforeand postafter -->
 	<!-- <bean id="userServiceId2" class="com.zhangll.e_lifecycle.UserServiceImp" scope="singleton"></bean> -->
-	<bean class="com.zhangll.e_lifecycle.PostPressionDemo"></bean>
+	<!-- <bean class="com.zhangll.e_lifecycle.PostPressionDemo"></bean> -->
 </beans>

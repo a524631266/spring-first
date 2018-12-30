@@ -6,5 +6,8 @@ package com.zhangll.e_lifecycle;
 public interface UserService {
 
     public void addUser();
+
     public void myInit();
+
+    public void myDestroy();
 }
