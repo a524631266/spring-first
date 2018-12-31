@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="coll" class="com.zhangll.c_inject_2.collection.CollData">
+		<property name="arrayData">
+			<array>
+				<value>DS</value>
+				<value>DZD</value>
+				<value>mn</value>
+			</array>
+		</property>
+		<property name="listData">
+			<list>
+				<value>l1</value>
+				<value>l2</value>
+				<value>l3</value>
+			</list>
+		</property>
+		<property name="setData">
+			<set>
+				<value>s1</value>
+				<value>s2</value>
+				<value>s3</value>
+			</set>
+		</property>
+		<property name="mapData">
+			<map>
+				<entry key="a" value="b"></entry>
+				<entry>
+					<key><value>c</value></key>
+					<value>cc</value>
+				</entry>
+			</map>
+		</property>
+		<property name="propsData">
+			<props>
+				<prop key="高富帅">玡</prop>
+				<prop key="白富美">嬲</prop>
+				<prop key="屌丝">挊</prop>
+			</props>
+		</property>
+	</bean>
+
+
+</beans>
