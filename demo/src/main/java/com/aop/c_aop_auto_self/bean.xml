@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<!-- 创建一个目标类 -->
+<bean id="serviceid" class="com.aop.c_aop_auto_self.UserServicImp"></bean>
+<!-- 创建一个且切面类 -->
+<bean id="myaspectid" class="com.aop.c_aop_auto_self.MyAspect"></bean>
+<!-- 装配织入代码，这个是一个proxyfactorybean -->
+<bean id="proxyservice" class="org.springframework.aop.framework.ProxyFactoryBean">
+	<!-- 织入目标类名，使用value -->
+	<property name="targetName" value="serviceid"></property>
+	<!-- 织入切面类名词，使用value -->
+	<property name="interceptorNames" value="myaspectid"></property>
+	<!-- 织入接口，即哪些连接点需要被切入，成为切入点，这里默认全部 -->
+	<property name="interfaces" value="com.aop.c_aop_auto_self.UserService"></property>
+	<!-- true代表为cgl false代表proxy -->
+  <property name="optimize" value="true"></property>
+</bean>
+</beans>

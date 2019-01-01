@@ -4,8 +4,6 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-import com.aop.b_cglib.UserServiceImpChild;
-
 /**
  * 整合切面对象和目标类的过错，同时也叫做给目标类织入通知的过错
  */

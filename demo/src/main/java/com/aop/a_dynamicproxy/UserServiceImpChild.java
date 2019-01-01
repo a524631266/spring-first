@@ -1,6 +1,4 @@
-package com.aop.b_cglib;
-
-import com.aop.a_dynamicproxy.UserServicImp;
+package com.aop.a_dynamicproxy;
 
 public class UserServiceImpChild extends UserServicImp {
     public void query() {
