@@ -7,11 +7,15 @@
 
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DemoApplication",
+            "request": "launch",
+            "mainClass": "com.home.java.fundament.playground.DemoApplication",
+            "projectName": "playground",
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch)",
             "request": "launch",
-            // "cwd": "${workspaceFolder}",
-            // "console": "internalConsole",
-            // "stopOnEntry": false,
             "mainClass": "com.zhangll.first.demo.DemoApplication",
             "args": "0"
         },
@@ -20,7 +24,7 @@
             "name": "Debug (Attach)",
             "request": "attach",
             "hostName": "localhost",
-            "port": "<debug port of remote debuggee>"
+            "port": 8098
         }
     ]
 }

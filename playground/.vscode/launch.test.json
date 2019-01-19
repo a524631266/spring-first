@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "playground",
+                "projectName": "playground",
+                "workingDirectory": "i:\\家和工作记录\\spring-first\\playground",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "playground",
+                "projectName": "playground",
+                "workingDirectory": "i:\\家和工作记录\\spring-first\\playground",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
