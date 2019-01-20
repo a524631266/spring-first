@@ -59,4 +59,32 @@ public class DemoApplicationTests2 {
 
 		}
 	}
+
+	@Test
+	public void testduotai() {
+		System.out.println("---------fu---");
+		Fu f = new Zi();
+		System.out.println(f.num);
+		f.show();
+		System.out.println("---------zi---");
+		Zi zi = (Zi) f;
+		System.out.println(zi.num); // 100
+		zi.show(); // 10
+	}
+}
+
+class Fu {
+	int num = 10;
+
+	public void show() {
+		System.out.println(num);
+	}
+}
+
+class Zi extends Fu {
+	int num = 100;
+
+	public void show() {
+		System.out.println(num);
+	}
 }
