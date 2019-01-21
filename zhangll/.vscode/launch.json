@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DemoApplicationTests",
+            "request": "launch",
+            "mainClass": "annotationlearing.zhangll.DemoApplicationTests",
+            "projectName": "zhangll"
+        }
+    ]
+}
