@@ -10,6 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.test.context.junit4.SpringRunner;
 
 import annotationlearing.zhangll.one.controller.Persion;
+import annotationlearing.zhangll.one.object.Car;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -52,12 +53,22 @@ public class DemoApplicationTests {
 		Object bean2 = acc.getBean("person01");
 	}
 
+	/**
+	 * 测试bean生命周期2的功能
+	 */
+	public void beanLifeCircleTest2() {
+		Object bean = acc.getBean(Car.class);
+		Object bean2 = acc.getBean(Car.class);
+		System.out.println(bean == bean2);
+	}
+
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,
 			InvocationTargetException, NoSuchMethodException, SecurityException {
 		DemoApplicationTests dat = new DemoApplicationTests();
 		// dat.onetest2();
 		// dat.onetest2();
-		dat.beanLifeCircleTest();
+		// dat.beanLifeCircleTest();
+		dat.beanLifeCircleTest2();
 	}
 
 }
