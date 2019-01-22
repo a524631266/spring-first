@@ -19,6 +19,6 @@ public class DogPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 
         System.out.println("post 初始化之前 构造之后" + beanName);
-        return bean;
+        return null;
     }
 }

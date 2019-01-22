@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.stereotype.Controller;
@@ -28,6 +29,7 @@ import annotationlearing.zhangll.one.service.BookService;
 /**
  * 配置类中如果满足条件才能使得所有beans生效哦
  */
+@PropertySource(value = { "classpath:application.properties" })
 @Conditional(value = { LinuxCondition.class })
 @Configuration
 @ComponentScan(value = "annotationlearing.zhangll.one", includeFilters = {

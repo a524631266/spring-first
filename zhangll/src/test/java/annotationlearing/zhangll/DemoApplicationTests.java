@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.core.env.Environment;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import annotationlearing.zhangll.one.controller.Persion;
@@ -73,13 +74,24 @@ public class DemoApplicationTests {
 		acc.getClass().getMethod("close", null).invoke(acc, null);
 	}
 
+	/**
+	 * 获取环境变量的值, 因为property中的属性也在里面
+	 */
+	public void getEnvironmentInfo() {
+		Environment a = acc.getEnvironment();
+		System.out.println(a);
+		String name = a.getProperty("zhangll.age");
+		System.out.println(name);
+	}
+
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,
 			InvocationTargetException, NoSuchMethodException, SecurityException {
 		DemoApplicationTests dat = new DemoApplicationTests();
 		// dat.onetest2();
 		// dat.onetest2();
 		// dat.beanLifeCircleTest();
-		dat.beanLifeCircleTest2();
+		// dat.beanLifeCircleTest2();
+		dat.getEnvironmentInfo();
 	}
 
 }
