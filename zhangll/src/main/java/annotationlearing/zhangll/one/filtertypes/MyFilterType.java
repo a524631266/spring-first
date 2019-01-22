@@ -20,7 +20,9 @@ public class MyFilterType implements TypeFilter {
         System.out.println("路径：" + resoucer.getFilename());// 径：BookController.class
         System.out.println("getDescription：" + resoucer.getDescription());// 径：BookController.class
         System.out.println("classmetadata" + clazz.getClassName()); // aannotationlearing.zhangll.one.service.BookService
-        return resoucer.getFilename().contains("Car") ? true : false;
+        String filename = resoucer.getFilename();
+
+        return filename.contains("Car") || filename.contains("Dog") ? true : false;
         // return false;
     }
 

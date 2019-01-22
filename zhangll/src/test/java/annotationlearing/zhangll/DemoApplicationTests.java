@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import annotationlearing.zhangll.one.controller.Persion;
 import annotationlearing.zhangll.one.object.Car;
+import annotationlearing.zhangll.one.object.Dog;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -55,11 +56,21 @@ public class DemoApplicationTests {
 
 	/**
 	 * 测试bean生命周期2的功能
+	 * 
+	 * @throws SecurityException
+	 * @throws NoSuchMethodException
+	 * @throws InvocationTargetException
+	 * @throws IllegalArgumentException
+	 * @throws IllegalAccessException
 	 */
-	public void beanLifeCircleTest2() {
-		Object bean = acc.getBean(Car.class);
-		Object bean2 = acc.getBean(Car.class);
+	public void beanLifeCircleTest2() throws IllegalAccessException, IllegalArgumentException,
+			InvocationTargetException, NoSuchMethodException, SecurityException {
+		// Object bean = acc.getBean(Car.class);
+		// Object bean2 = acc.getBean(Car.class);
+		Dog bean = acc.getBean(Dog.class);
+		Dog bean2 = acc.getBean(Dog.class);
 		System.out.println(bean == bean2);
+		acc.getClass().getMethod("close", null).invoke(acc, null);
 	}
 
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,
