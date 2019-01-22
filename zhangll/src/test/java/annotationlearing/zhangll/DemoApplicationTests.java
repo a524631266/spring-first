@@ -38,6 +38,10 @@ public class DemoApplicationTests {
 		for (String name : names) {
 			System.out.println("name " + name);
 		}
+		Object da = acc.getBean("fb");
+		System.out.println(da.getClass()); // class annotationlearing.zhangll.one.controller.Persion
+		Object fb = acc.getBean("&fb"); // 获取工厂bean的方法
+		System.out.println(fb.getClass()); // class annotationlearing.zhangll.one.factorybean.MyFactoryBean
 	}
 
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,

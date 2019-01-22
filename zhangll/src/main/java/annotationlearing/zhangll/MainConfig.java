@@ -16,6 +16,7 @@ import annotationlearing.zhangll.condition.LinuxCondition;
 import annotationlearing.zhangll.condition.WinCondition;
 import annotationlearing.zhangll.importclass.Color;
 import annotationlearing.zhangll.one.controller.Persion;
+import annotationlearing.zhangll.one.factorybean.MyFactoryBean;
 import annotationlearing.zhangll.one.filtertypes.MyFilterType;
 import annotationlearing.zhangll.one.service.BookService;
 
@@ -62,4 +63,10 @@ public class MainConfig {
     public Persion person2() {
         return new Persion(40, "linus 33");
     }
+
+    @Bean
+    public MyFactoryBean fb() {
+        return new MyFactoryBean();
+    }
+
 }
