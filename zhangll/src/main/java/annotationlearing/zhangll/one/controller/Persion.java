@@ -7,9 +7,11 @@ public class Persion {
     private String name;
 
     public Persion() {
+        System.out.println("创建Persion构造器");
     }
 
     public Persion(int age, String name) {
+        System.out.println("创建Persion构造器");
         this.age = age;
         this.name = name;
     }
@@ -50,7 +52,7 @@ public class Persion {
     }
 
     /**
-     * 只有在单例模式下才会触发销毁
+     * 只有在单例模式下才会触发销毁 由于在多实例模式(prototype)下,spring不会管理生成的对象,所以就不会 触发,需要手动触发
      */
     public void destroy() {
         System.out.println("销毁了");

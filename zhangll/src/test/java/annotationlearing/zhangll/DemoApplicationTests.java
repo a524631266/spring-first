@@ -44,11 +44,20 @@ public class DemoApplicationTests {
 		System.out.println(fb.getClass()); // class annotationlearing.zhangll.one.factorybean.MyFactoryBean
 	}
 
+	/**
+	 * 测试bean生命周期的功能
+	 */
+	public void beanLifeCircleTest() {
+		Object bean = acc.getBean("person01");
+		Object bean2 = acc.getBean("person01");
+	}
+
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,
 			InvocationTargetException, NoSuchMethodException, SecurityException {
 		DemoApplicationTests dat = new DemoApplicationTests();
 		// dat.onetest2();
-		dat.onetest2();
+		// dat.onetest2();
+		dat.beanLifeCircleTest();
 	}
 
 }

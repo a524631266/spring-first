@@ -42,10 +42,10 @@ public class MainConfig {
      * @return
      */
     @Lazy
-    // @Scope("prototype")
+    @Scope("prototype")
     @Bean(initMethod = "start", destroyMethod = "destroy")
     public Persion person01() {
-        System.out.println("创建personbena"); // prototype模式下会多次打印
+        System.out.println("调用Config中的方法"); // prototype模式下会多次打印
         return new Persion(11, "zhangll");
     }
 
