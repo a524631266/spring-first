@@ -30,6 +30,7 @@ import annotationlearing.zhangll.one.service.BookService;
  * 配置类中如果满足条件才能使得所有beans生效哦
  */
 @PropertySource(value = { "classpath:application.properties" })
+@PropertySource(value = { "classpath:config/myown.properties" })
 @Conditional(value = { LinuxCondition.class })
 @Configuration
 @ComponentScan(value = "annotationlearing.zhangll.one", includeFilters = {
