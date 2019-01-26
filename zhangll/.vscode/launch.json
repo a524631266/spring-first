@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DemoApplication",
+            "request": "launch",
+            "mainClass": "annotationlearing.zhangll.DemoApplication",
+            "projectName": "zhangll"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TransactionTest",
+            "request": "launch",
+            "mainClass": "annotationlearing.zhangll.TransactionTest",
+            "projectName": "zhangll"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - DemoApplicationTests",
             "request": "launch",
             "mainClass": "annotationlearing.zhangll.DemoApplicationTests",

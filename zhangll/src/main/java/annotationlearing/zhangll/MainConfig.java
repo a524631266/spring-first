@@ -31,6 +31,7 @@ import annotationlearing.zhangll.one.service.BookService;
  */
 @PropertySource(value = { "classpath:application.properties" })
 @PropertySource(value = { "classpath:config/myown.properties" })
+@PropertySource(value = { "classpath:/config/ymlconfig.yml" })
 @Conditional(value = { LinuxCondition.class })
 @Configuration
 @ComponentScan(value = "annotationlearing.zhangll.one", includeFilters = {

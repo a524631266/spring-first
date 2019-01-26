@@ -84,6 +84,8 @@ public class DemoApplicationTests {
 		System.out.println(name);
 		String name2 = a.getProperty("zhangll.age2");
 		System.out.println(name2);
+		String name3 = a.getProperty("zhangll.age3");
+		System.out.println(name3);
 	}
 
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException,
